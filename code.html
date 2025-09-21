@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Tour App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="logo">Smart Tour</div>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#registration">Registration ID</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#login">Login/Sign Up</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Home Slide -->
+<section id="home" class="slide home-slide">
+    <div class="home-content">
+        <h1>Explore the World Safely</h1>
+        <p>Smart Tour keeps you secure while you enjoy your travels.</p>
+    </div>
+</section>
+
+<!-- Registration Slide -->
+<section id="registration" class="slide reg-slide">
+    <h2>Generate Your Blockchain Registration ID</h2>
+    <div class="id-box">
+        <p><i class="fa-solid fa-id-card"></i> Your ID: <span id="blockchainId">Click Generate</span></p>
+        <button onclick="generateId()"><i class="fa-solid fa-key"></i> Generate ID</button>
+        <div class="extra-info">
+            <p><i class="fa-solid fa-lock"></i> Secure & Unique</p>
+            <p><i class="fa-solid fa-shield-halved"></i> Verified on Blockchain</p>
+            <p><i class="fa-solid fa-clock"></i> Instant Generation</p>
+        </div>
+    </div>
+</section>
+
+<!-- About Us Slide -->
+<section id="about" class="slide about-slide">
+    <h2>About Our App</h2>
+    <div class="features">
+        <div class="feature">
+            <i class="fa-solid fa-location-dot fa-2x"></i>
+            <h3>Location Tracking</h3>
+            <p>Track your real-time location for safe travel guidance.</p>
+        </div>
+        <div class="feature">
+            <i class="fa-solid fa-triangle-exclamation fa-2x"></i>
+            <h3>Un-Safety Alerts</h3>
+            <p>Get instant alerts when approaching unsafe areas.</p>
+        </div>
+        <div class="feature">
+            <i class="fa-solid fa-cube fa-2x"></i>
+            <h3>Blockchain ID</h3>
+            <p>Secure your identity with our blockchain registration system.</p>
+        </div>
+        <div class="feature">
+            <i class="fa-solid fa-user-check fa-2x"></i>
+            <h3>User Friendly</h3>
+            <p>Simple interface designed for all travelers.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact/Login Slide -->
+<section id="login" class="slide contact-slide">
+    <h2>Contact & Login</h2>
+    <p><i class="fa-solid fa-envelope"></i> Email: support@smarttour.com</p>
+    <p><i class="fa-solid fa-phone"></i> Phone: +91 9876543210</p>
+    <p><i class="fa-solid fa-location-dot"></i> Address: 67A Travel Street, Coimbatore</p>
+</section>
+
+<!-- Blockchain ID Generator Script -->
+<script>
+function generateId() {
+    const id = 'ID-' + Math.floor(Math.random() * 1000000);
+    document.getElementById('blockchainId').textContent = id;
+}
+</script>
+
+</body>
+</html>

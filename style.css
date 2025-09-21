@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    scroll-behavior: smooth;
+    background-color: #f2f2f2; /* slightly off-white for contrast */
+}
+
+header {
+    background-color: #718397;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px; /* increased padding to make header taller */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+header .logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+header nav ul li a:hover {
+    color:rgb(6, 8, 10);
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+
+/* General Slide */
+.slide {
+    width: calc(100% - 100px);  /* leaves 50px on left and right */
+    min-height: 90vh;      
+    margin: 40px auto;       /* 40px top and bottom spacing */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    transition: all 1s ease;
+    border-radius: 25px;   
+    overflow: hidden;      
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3); 
+}
+
+
+/* Home Slide */
+.home-slide {
+    background-image: url('photo1.jpeg');
+}
+
+.home-slide .home-content h1 {
+    font-size: 56px;
+    text-shadow: 2px 2px 12px rgba(0,0,0,0.8);
+    margin-bottom: 20px;
+}
+
+.home-slide .home-content p {
+    font-size: 26px;
+    text-shadow: 1px 1px 10px rgba(0,0,0,0.7);
+}
+
+/* Registration Slide */
+.reg-slide {
+    background-image: url('reg.png');
+    padding: 80px 20px;
+}
+
+.reg-slide h2 {
+    margin-bottom: 50px;
+    font-size: 38px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+}
+
+/* Generate ID Box */
+.id-box {
+    width: 80%;
+    max-width: 850px;
+    padding: 60px 70px;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    font-size: 22px;
+     background: linear-gradient(145deg, #978c8c, #f2f2f2);
+    color: #000;
+    transition: all 0.4s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.id-box::before {
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    top: -10%;
+    left: -10%;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.3), transparent 70%);
+    animation: rotateBG 6s linear infinite;
+    z-index: 0;
+}
+
+@keyframes rotateBG {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.id-box p, .id-box .extra-info {
+    position: relative;
+    z-index: 1;
+}
+
+.id-box:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+}
+
+.id-box p {
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.id-box .extra-info {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 18px;
+    color: #007BFF;
+    text-align: center;
+}
+
+.id-box .extra-info p i {
+    margin-right: 10px;
+}
+
+.id-box button {
+    display: block;
+    margin: 25px auto 0 auto;
+    padding: 20px 55px;
+    font-size: 24px;
+    background: linear-gradient(90deg, #007BFF, #00BFFF);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.id-box button:hover {
+    background: linear-gradient(90deg, #0056b3, #0080ff);
+    transform: scale(1.07);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* About Us Slide */
+.about-slide {
+    background-image: url('about-us.jpg');
+    padding: 120px 20px;
+}
+
+.about-slide h2 {
+    margin-bottom: 60px;
+    font-size: 42px;
+    color: white;
+    text-shadow: 2px 2px 12px rgba(0,0,0,0.7);
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(245,245,255,0.85));
+    padding: 40px 30px;
+    border-radius: 25px;
+    flex: 1 1 260px;
+    min-width: 260px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    transition: all 0.4s ease;
+    color: #000;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature:hover {
+    transform: translateY(-12px) scale(1.05);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.35);
+}
+
+.feature i {
+    color: #007BFF;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.feature:hover i {
+    color: #00BFFF;
+}
+
+.feature h3 {
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+.feature p {
+    font-size: 18px;
+}
+
+/* Contact Slide */
+.contact-slide {
+    background-image: url('contact-us.jpg');
+    padding: 80px 20px;
+}
+
+.contact-slide h2 {
+    margin-bottom: 40px;
+    font-size: 38px;
+    color: white;
+    text-shadow: 2px 2px 12px rgba(0,0,0,0.7);
+}
+
+.contact-slide p {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.contact-slide i {
+    margin-right: 10px;
+    color:white;
+}
