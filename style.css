@@ -71,7 +71,7 @@ header nav ul li a:hover {
 
 /* Home Slide */
 .home-slide {
-    background-image: url('photo1.jpeg');
+    background-image: url('images/photo1.jpeg');
 }
 
 .home-slide .home-content h1 {
@@ -87,7 +87,7 @@ header nav ul li a:hover {
 
 /* Registration Slide */
 .reg-slide {
-    background-image: url('reg.png');
+    background-image: url('images/reg.png');
     padding: 80px 20px;
 }
 
@@ -188,7 +188,7 @@ header nav ul li a:hover {
 
 /* About Us Slide */
 .about-slide {
-    background-image: url('about-us.jpg');
+    background-image: url('images/about-us.jpg');
     padding: 120px 20px;
 }
 
@@ -246,7 +246,7 @@ header nav ul li a:hover {
 
 /* Contact Slide */
 .contact-slide {
-    background-image: url('contact-us.jpg');
+    background-image: url('images/contact-us.jpg');
     padding: 80px 20px;
 }
 
@@ -266,3 +266,4 @@ header nav ul li a:hover {
     margin-right: 10px;
     color:white;
 }
+
